@@ -1,4 +1,4 @@
-"assignment_1" contains all the resources needed for the coursework submission.
+This repository contains all the resources needed for the coursework submission.
 
 A Makefile is included which can be used to compile the submission for running.
 
