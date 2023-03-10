@@ -1,0 +1,83 @@
+/*This is the module plan for assignment_1. I will try to adhere to this plan where possible, however the plan may be susceptible to change throughout development as further ways to modularise the programs are discovered, or if it's found that certain modules are not needed. In this case, the plan will be updated accordingly. */
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmDefinitions.h:
+A header file that will define and contain all of the error codes and common numbers to be used in the other modules. This module will be used for all .c files in this assignment.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmStruct.h:
+A header file to define a structure that will be used to hold all the relevant values for an inputted pgmImage. This module will be used in all .c files except for Assemble.c.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmRead.h:
+This header file will contain the function prototypes for the functions in pgmRead.c.
+
+pgmRead.c:
+This module will be used to read in the values from a pgm file and store them in a struct (defined in pgmImage.h). This module will be used in all .c files.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmWrite.h:
+This header file will contain the function prototypes for the functions in pgmWrite.c.
+
+pgmWrite.c:
+This module will create a new pgm file and write the relevant values to it. This module will be used in all .c files except for pgmComp.c.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmEcho.h:
+This header file will contain the function prototypes for the functions in pgmEcho.c.
+
+pgmEcho.c:
+This module will be the rewritten and improved pgmEcho as outlined in Task 1. It will read in a pgm file, store it in a struct and then output it ("Echo" it) to a different file, using command-line parameters to specify the files.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmComp.h:
+This header file will contain the function prototypes for the functions in pgmComp.c.
+
+pgmComp.c:
+This module will read in two pgm files (using command-line parameters to specify the files) and test wether they are logically equivalent or not (if they have the same values).
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgma2b.h:
+This header file will contain the function prototypes for the functions in pgma2b.c.
+
+pgma2b.c:
+This module will read in a pgm file in ASCII format and convert it to a pgm file in Binary format.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmb2a.h:
+This header file will contain the function prototypes for the functions in pgm2ba.c.
+
+pgmb2a.c:
+This module will read in a pgm file in Binary format and convert it to a pgm file in ASCII format.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmReduce.h:
+This header file will contain the function prototypes for the functions in pgmReduce.c.
+
+pgmReduce.c:
+This module will take in 3 arguments (from the command-line): an input file, an integer factor and an output file. It will reduce the pgm image size by the factor stated in the command-line and output a pgm file with that new image size.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmTile.h:
+This header file will contain the function prototypes for the functions in pgmTile.c.
+
+pgmTile.c:
+This module will take in 3 arguments (from the command-line): an input file, an integer factor (n) and an output file name template. The module will then divide the input file into n x n smaller images that represent parts of the orignal image.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+pgmAssemble.h:
+This header file will contain the function prototypes for the functions in pgmAssemble.c.
+
+pgmAssemble.c:
+This module will take in 3n+3 arguments (from the command-line): an output file name, the width of the output file, the height of the output file and triples of: the row where subimage starts, the column where subimage starts and the subimage to insert at that location. The module will then assemble a larger image from all of the inputted smaller ones.

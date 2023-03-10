@@ -1,0 +1,5 @@
+/* This is the test plan for the programmes in assignment_1 */
+
+In order to test each of my programmes, I will create a test script ("testscript.sh") that includes a number of test cases to ensure that each programme runs successfully and gives the correct output. Furthermore, during development, I will use printf() statements to print messages and variables at key stages of execution to monitor progress and ensure that my code runs correctly.
+
+My test cases will use a range of test data to ensure that my code can correctly handle different inputs and also handle errors appropriately. I will be using normal data and edge cases (to ensure the input is accepted and the correct output is given) as well as unexpected values and invalid data (to ensure that those inputs are rejected and the appropriate error codes are given).
